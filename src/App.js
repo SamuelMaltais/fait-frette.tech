@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Province from './Map-Component/Province';
+import {ReactComponent as Logo} from './logo.svg'
+import Canada from './Map-Component/Province';
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <svg height={1000} width={1000}> <circle cx="120" cy="85" r="400" fill="#0b2b57" className='Circle'/></svg>
+        <Logo className="Logo"/>
       </header>
+      <body>
+        <Canada/>
+      </body>
     </div>
   );
 }
