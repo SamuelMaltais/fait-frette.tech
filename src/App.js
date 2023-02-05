@@ -6,7 +6,6 @@ import Canada from './Map-Component/Province';
 import TopSideBar from './components/TopSideBar';
 import Sidebar from './components/Sidebar';
 import Shadow from './Map-Component/Shadow';
-import ProvincesSection from './components/ProvincesSection';
 
 function App() {
   const [temp, setTemp] = useState();
