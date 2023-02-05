@@ -1,10 +1,12 @@
-import React from 'react';
+import { React, useState } from 'react';
 import { Box, Button, Slider, Stack, Typography } from '@mui/material'
 import { Thermostat, Air, LocalDrink, Add, Remove } from '@mui/icons-material';
 import './Sidebar.css'
 import TopSideBar from './TopSideBar';
+import { findBetterCity } from './getBetterCity';
 
 function Sidebar(props) {
+    const [loading, setLoading] = useState(false)
     const changeTemp = (event, temp) => {
         props.setTemp(temp);
     }
@@ -14,8 +16,15 @@ function Sidebar(props) {
     const changeHumidity = (event, humidity) => {
         props.setHumidity(humidity);
     }   
+    var changeCity = async() =>{
+        var cities = await findBetterCity("Montréal", props.temp, props.wind, props.humidity, props.dayInFuture)
+        setLoading(false)
+        console.log(cities)
+        props.setCities(cities)
+    }
     return (
         <>
+            <h1>{loading ? "LOADING": ""}</h1>
             <Stack className="sidebar-container" direction="column" alignItems="center" justifyContent="center" spacing={5}>
                 <Typography variant="h4">Preferences</Typography>
                 <TopSideBar city={props.city} dayInFuture={props.dayInFuture} setCity={props.setCity} setDayInFuture={props.setDayInFuture} />
@@ -72,7 +81,8 @@ function Sidebar(props) {
                 </Stack>
                 <Button variant="contained"
                 onClick={()=>{
-                    get
+                    setLoading(true)
+                    changeCity()
                 }} 
                 >Find Cities</Button>
             </Stack>
