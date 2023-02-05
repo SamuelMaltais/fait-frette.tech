@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Province from './Map-Component/Province';
 import {ReactComponent as Logo} from './logo.svg'
@@ -8,25 +8,29 @@ import Sidebar from './components/Sidebar';
 import Shadow from './Map-Component/Shadow';
 
 function App() {
-  const [temp, setTemp] = useState()
-  const [city, setCity] = useState("Montréal")
-  const [wind, setWind] = useState()
-  const [humidity, setHumidity] = useState()
-  const [dayInFuture, setDayInFuture] = useState()
+  const [temp, setTemp] = useState();
+  const [city, setCity] = useState("Montréal");
+  const [wind, setWind] = useState();
+  const [humidity, setHumidity] = useState();
+  const [dayInFuture, setDayInFuture] = useState();
+
   return (
     <>
     <div className='ret'>
-    <svg height={1000} width={1000} className='Circle'> <circle cx="120" cy="85" r="400" fill="#0b2b57" className='Circle'/></svg>
+    <svg height={700} width={1000} className='Circle'> <circle cx="120" cy="85" r="400" fill="#0b2b57" className='Circle'/></svg>
     <Logo className="Logo"/>
     </div>
     
 
     <div className="App">
       <div>
-      <Canada/>
+      <Canada />
       <Shadow className="map"/>
       </div>
-      <Sidebar />
+      <Sidebar 
+        temp={temp} wind={wind} humidity={humidity} city={city} dayInFuture={dayInFuture}
+        setTemp={setTemp} setWind={setWind} setHumidity={setHumidity} setCity={setCity} setDayInFuture={setDayInFuture} 
+      />
     </div>
     </>
   );
