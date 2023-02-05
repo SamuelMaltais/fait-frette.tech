@@ -1,10 +1,11 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
+import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
-import { List } from '@mui/material';
-import { cities} from "../cities.js"
+import {cities} from "../cities.js"
+import { FixedSizeList } from 'react-window';
 
 
 export default function VirtualizedList(props) {
@@ -19,28 +20,33 @@ export default function VirtualizedList(props) {
       population = cities[props.cities[i].name][0].population
     }
     catch{
-
     }
+
   arr.push(
-  <ListItem component="div" disablePadding>
+    <ListItem component="div" disablePadding>
       <ListItemButton>
         <ListItemText primary={`${props.cities[i].name}`} 
         secondary={`Coords: ${props.cities[i].lat } , ${props.cities[i].lng }
         Population: ${population}'
-        `} 
-    
-        
-        />
+        `} />
       </ListItemButton>
     </ListItem>
   )
   }
   return (
-    <List
-      sx={{ width: '100%', height: 450, maxWidth: 250, bgcolor: 'background.paper', position: "absolute", bottom:"50px",left:"50px" }}
+    
+    <Box
+      sx={{overflow: 'auto', width: '100%', maxHeight: 450, maxWidth: 250, bgcolor: 'background.paper', position: "absolute", bottom:"50px",left:"50px" }}
     >
+      <List
+        height={400}
+        width={360}
+        itemSize={46}
+        itemCount={arr.length}
+        overscanCount={5}
+      >
         {arr}
-
-    </List>
+      </List>
+    </Box>
   );
 }
