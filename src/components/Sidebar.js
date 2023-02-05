@@ -24,7 +24,7 @@ function Sidebar(props) {
     }
     return (
         <>
-            <h1>{loading ? "LOADING": ""}</h1>
+            {/* <h1>{loading ? "LOADING": ""}</h1> */}
             <Stack className="sidebar-container" direction="column" alignItems="center" justifyContent="center" spacing={5}>
                 <Typography variant="h4">Preferences</Typography>
                 <TopSideBar city={props.city} dayInFuture={props.dayInFuture} setCity={props.setCity} setDayInFuture={props.setDayInFuture} />
@@ -79,12 +79,18 @@ function Sidebar(props) {
                         <Add />
                     </Stack>
                 </Stack>
-                <Button variant="contained"
-                onClick={()=>{
-                    setLoading(true)
-                    changeCity()
-                }} 
-                >Find Cities</Button>
+                <Stack direction="row" spacing={2}>
+                    <div className={loading ? "spinner" : ""} />
+                    <Button variant="contained"
+                        onClick={()=>{
+                            setLoading(true)
+                            changeCity()
+                        }} 
+                        disabled={loading ? true : false}
+                    >
+                        {loading ? "Loading..." : "Find Cities"}
+                    </Button>
+                </Stack>
             </Stack>
         </>
     );
