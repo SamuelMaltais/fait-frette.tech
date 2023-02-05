@@ -26,7 +26,9 @@ function App() {
       <Canada/>
       <Shadow className="map"/>
       </div>
-      <Sidebar />
+      <Sidebar 
+        temp={temp} wind={wind} humidity={humidity} city={city} dayInFuture={dayInFuture}
+        setTemp={setTemp} setWind={setWind} setHumidity={setHumidity} setCity={setCity} setDayInFuture={setDayInFuture} />
     </div>
     </>
   );

@@ -24,14 +24,14 @@ function TopSideBar(props) {
         disablePortal
         id="combo-box-demo"
         options={cities}
-        sx={{ width: 300 }}
+        sx={{ width: "100%" }}
         renderInput={(params) => <TextField {...params} label="City" />}
         />
         <Autocomplete
         disablePortal
         id="combo-box-demo"
         options={days}
-        sx={{ width: 300 }}
+        sx={{ width: "100%" }}
         renderInput={(params) => <TextField {...params} label="When are you leaving ?" />}
         />
     </div> 

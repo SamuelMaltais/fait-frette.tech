@@ -13,11 +13,11 @@ function Sidebar(props) {
     }
     const changeHumidity = (event, humidity) => {
         props.setHumidity(humidity);
-    }
+    }   
     return (
         <>
             <Stack className="container" direction="column" alignItems="center" spacing={5}>
-                <TopSideBar />
+                <TopSideBar city={props.city} dayInFuture={props.dayInFuture} setCity={props.setCity} setDayInFuture={props.setDayInFuture} />
                 <Stack className="section" direction="column" alignItems="center" spacing={2}>
                     <Typography><Thermostat />  Temperature</Typography>
                     <Stack className="slider" direction="row" spacing={2}>
