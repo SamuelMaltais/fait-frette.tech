@@ -24,14 +24,13 @@ function App() {
 
     <div className="App">
       <div>
-      <Canada provinceDisplay={provinceDisplay} setProvinceDisplay={setProvinceDisplay} />
+      <Canada />
       <Shadow className="map"/>
       </div>
       <Sidebar 
         temp={temp} wind={wind} humidity={humidity} city={city} dayInFuture={dayInFuture}
         setTemp={setTemp} setWind={setWind} setHumidity={setHumidity} setCity={setCity} setDayInFuture={setDayInFuture} 
       />
-      <ProvincesSection provinceDisplay={provinceDisplay} />
     </div>
     </>
   );
