@@ -44,3 +44,82 @@
     position: relative;
     z-index: -1;
   }
+
+  .map-container{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .province{
+    transition: all .2s ease-in-out;
+    position: absolute;
+  }
+
+  .province:hover{
+    transform: scale(1.07)
+  }
+
+  /* provinces */
+
+  .Alberta{
+    top: 390px;
+    left: 360px;
+  }
+
+  .Bc{
+    top: 330px;
+    left: 245px;
+  }
+
+  .Manitoba{
+    top: 410px;
+    left: 550px;
+  }
+
+  .Nb{
+    top: 505px;
+    left: 930px;
+  }
+
+  .Newfoundland{
+    top: 335px;
+    left: 885px;
+  }
+
+  .Northwest{
+    top: 155px;
+    left: 345px;
+  }
+
+  .Ns{
+    top: 485px;
+    left: 995px;
+  }
+
+  .Nunavut{
+    top: 70px;
+    left: 455px;
+  }
+
+  .Ontario{
+    top: 445px;
+    left: 625px;
+  }
+
+  .Quebec{
+    top: 340px;
+    left: 760px;
+  }
+
+  .Saskatchewan{
+    top: 405px;
+    left: 445px;
+  }
+
+  .Yukon{
+    top: 210px;
+    left: 245px;
+  }
+
+  /* provinces */
