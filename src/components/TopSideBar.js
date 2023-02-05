@@ -23,8 +23,13 @@ function TopSideBar(props) {
         <Autocomplete
         disablePortal
         id="combo-box-demo"
-        options={cities}
+        options={list}
         sx={{ width: "100%" }}
+        onChange={
+          (event, city) => {
+            props.setCity(city);
+          }
+        }
         renderInput={(params) => <TextField {...params} label="City" />}
         />
         <Autocomplete
@@ -32,6 +37,11 @@ function TopSideBar(props) {
         id="combo-box-demo"
         options={days}
         sx={{ width: "100%" }}
+        onChange={
+          (event, dayInFuture) => {
+            props.setDayInFuture(dayInFuture);
+          }
+        }
         renderInput={(params) => <TextField {...params} label="When are you leaving ?" />}
         />
     </div> 

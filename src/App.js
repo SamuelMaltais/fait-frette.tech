@@ -13,6 +13,7 @@ function App() {
   const [wind, setWind] = useState()
   const [humidity, setHumidity] = useState()
   const [dayInFuture, setDayInFuture] = useState()
+
   return (
     <>
     <div className='ret'>
