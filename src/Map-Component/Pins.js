@@ -1,6 +1,6 @@
 import PlaceIcon from '@mui/icons-material/Place';
-import zIndex from '@mui/material/styles/zIndex';
-import { positions } from '@mui/system';
+import { useState } from 'react';
+import "./Pins.css"
 
 function positionPin(province, lng, lat){
 var x, y;
@@ -36,13 +36,12 @@ return [x, y]
 
 function Pins(props) {
     var pins = []
-
+    const [currCity, setCurrCity] = useState("Montreal")
     for(var i = 0; i<props.cities.length; i++){
         var lat = props.cities[i].lat
         var long = props.cities[i].lng
         var x = Math.abs(positionPin(props.cities[i].province, long, lat)[0])
         var y = Math.abs(positionPin(props.cities[i].province, long, lat)[1])
-
         var style = {
             position: "absolute",
             top: y - 50,
@@ -50,18 +49,29 @@ function Pins(props) {
             transform: "scale(2)",
             zIndex: "20"
         }
-
-
+        let name = props.cities[i].name
         pins.push(
             <PlaceIcon 
+            key={name}
+            value={name}
+            onClick={(event) => {
+                console.log(name)
+                setCurrCity(name)
+            }}
             style={style}
             />
         )
     }
+
+    
+
     return ( 
-    <div>
+        <>
         {pins}
-    </div> 
+        <div className='description-box'>
+            <p>{currCity}</p>
+        </div>
+    </>
     );
 }
 
