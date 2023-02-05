@@ -1,6 +1,8 @@
-import { Autocomplete, TextField } from "@mui/material";
+import { Autocomplete, TextField} from "@mui/material";
 import { cities } from "../cities";
 import "./topSideBar.css"
+
+
 
 function TopSideBar(props) {
     var list = [];
@@ -23,14 +25,19 @@ function TopSideBar(props) {
         <Autocomplete
         disablePortal
         id="combo-box-demo"
-        options={cities}
-        sx={{ width: 300 }}
-        renderInput={(params) => <TextField {...params} label="City" />}
+        className="autocomplete-box"
+        options={list}
+        sx={{ width: 300, color: 'success.main', borderBlock:'success.main',borderBlockColor:'success.main'}}
+        
+        renderInput={(params) => <TextField {...params} label="City" 
+        />}
         />
         <Autocomplete
         disablePortal
         id="combo-box-demo"
+        className="autocomplete-box"
         options={days}
+        color="#ffffff"
         sx={{ width: 300 }}
         renderInput={(params) => <TextField {...params} label="When are you leaving ?" />}
         />
