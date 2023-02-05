@@ -1,0 +1,15 @@
+.provinces-container {
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    padding: 3%;
+    background-color: transparent;
+}
+
+.provinces-display {
+    border-radius: 5px;
+    background-color: #fff;
+    color: black;
+    padding: 3%;
+    text-align: center;
+}
