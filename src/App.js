@@ -15,8 +15,10 @@ function App() {
 
   return (
     <>
-    < svg height={1} width={1} className='Circle'> <circle cx="120" cy="85" r="200" fill="#0b2b57" className='Circle'/></svg>
+    <div className='ret'>
+    <svg height={1000} width={1000} className='Circle'> <circle cx="120" cy="85" r="400" fill="#0b2b57" className='Circle'/></svg>
     <Logo className="Logo"/>
+    </div>
     <div className="App">
       <TopSideBar setCity={setCity} dayInFuture = {setDayInFuture} /> 
       <Canada className="map"/>

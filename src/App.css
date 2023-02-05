@@ -39,3 +39,8 @@
   .map{
     z-index: 2;
   }
+
+  .ret{
+    position: relative;
+    z-index: -1;
+  }
