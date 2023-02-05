@@ -1,11 +1,12 @@
 import { Autocomplete, TextField } from "@mui/material";
+import { cities } from "../cities";
 import "./topSideBar.css"
 
 function TopSideBar(props) {
-    const options = [
-        { label: 'The Godfather', id: 1 },
-        { label: 'Pulp Fiction', id: 2 },
-      ];
+    var list = [];
+    for(var city in cities){
+        list.push(city)
+    }
       const days = [
         "Today",
         "1",
@@ -22,7 +23,7 @@ function TopSideBar(props) {
         <Autocomplete
         disablePortal
         id="combo-box-demo"
-        options={options}
+        options={cities}
         sx={{ width: 300 }}
         renderInput={(params) => <TextField {...params} label="City" />}
         />
