@@ -36,7 +36,7 @@ function TopSideBar(props) {
             props.setCity(city);
           }
         }
-        renderInput={(params) => <TextField {...params} label="City" />}
+        renderInput={(params) => <TextField {...params} label="Where do you live ?" />}
         />
         <Autocomplete
         disablePortal
