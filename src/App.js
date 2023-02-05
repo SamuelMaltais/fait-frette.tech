@@ -5,6 +5,7 @@ import {ReactComponent as Logo} from './logo.svg'
 import Canada from './Map-Component/Province';
 import TopSideBar from './components/TopSideBar';
 import Sidebar from './components/Sidebar';
+import Shadow from './Map-Component/Shadow';
 
 function App() {
   const [temp, setTemp] = useState()
@@ -18,8 +19,13 @@ function App() {
     <svg height={1000} width={1000} className='Circle'> <circle cx="120" cy="85" r="400" fill="#0b2b57" className='Circle'/></svg>
     <Logo className="Logo"/>
     </div>
+    
+
     <div className="App">
-      <Canada className="map"/>
+      <div>
+      <Canada/>
+      <Shadow className="map"/>
+      </div>
       <Sidebar />
     </div>
     </>
