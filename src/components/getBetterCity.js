@@ -5,9 +5,8 @@ export async function findBetterCity(currentCity, tempDelta, windDelta, humidity
     var citiesInfo = [];
 
     var currentCityInfo = await getTemp(cities[currentCity][0].lat, cities[currentCity][0].lng, 0)
-    var currentTemp = currentCityInfo.current_weather.temperature;
-    var currentWind = currentCityInfo.current_weather.windspeed;
-    var currentHumidity = currentCityInfo.hourly.relativehumidity_2m[0];
+
+    
 
     for (var city in cities) {
         if (cities[city][0].population < 100000){
@@ -18,9 +17,23 @@ export async function findBetterCity(currentCity, tempDelta, windDelta, humidity
         var lng = cities[city][0].lng;
         var cityInfo = await getTemp(lat, lng, 0)
 
+        if (time == 0){
+        var currentTemp = currentCityInfo.current_weather.temperature;
+    var currentWind = currentCityInfo.current_weather.windspeed;
+    var currentHumidity = currentCityInfo.hourly.relativehumidity_2m[0];
         var temp = cityInfo.current_weather.temperature;
         var wind = cityInfo.current_weather.windspeed;
         var humidity = cityInfo.hourly.relativehumidity_2m[0];
+        } else {
+            var currentTemp = currentCityInfo.hourly.temperature_2m[time*24 - 1]
+            var currentWind = currentCityInfo.hourly.windspeed_10m[time*24 - 1]
+            var currentHumidity = currentCityInfo.hourly.relativehumidity_2m[time*24 - 1]
+        
+            var temp = cityInfo.hourly.temperature_2m[time*24 - 1]
+            var wind = cityInfo.hourly.windspeed_10m[time*24 - 1]
+            var humidity = cityInfo.hourly.relativehumidity_2m[time*24 - 1]
+        
+        }
 
         if ((tempDelta === 0 && (temp + 10 >= currentTemp || temp - 10 <= currentTemp)) 
         
@@ -46,10 +59,10 @@ export async function findBetterCity(currentCity, tempDelta, windDelta, humidity
         
                     )   {
                         citiesInfo.push({"name":city, "lat":lat, "lng":lng, "province":cities[city][0].province_id, "temp":temp, "humidity":humidity, "wind":wind})
-                }            
+                }
             }
         }
+        
     }
     return citiesInfo
 }
-//findBetterCity("Toronto", 2, -2, -2, 0);
