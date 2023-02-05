@@ -4,8 +4,7 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
-import {cities} from "../cities.js"
-import { FixedSizeList } from 'react-window';
+import {cities} from "../cities.js";
 
 
 export default function VirtualizedList(props) {

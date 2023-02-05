@@ -1,3 +1,4 @@
+import { conditionalExpression } from '@babel/types';
 import PlaceIcon from '@mui/icons-material/Place';
 import { useState } from 'react';
 import "./Pins.css"
@@ -50,12 +51,12 @@ function Pins(props) {
             zIndex: "20"
         }
         let name = props.cities[i].name
+        // console.log(props.cities[i]);
         pins.push(
             <PlaceIcon 
             key={name}
             value={name}
             onClick={(event) => {
-                console.log(name)
                 setCurrCity(name)
             }}
             style={style}

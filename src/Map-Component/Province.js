@@ -11,7 +11,7 @@ import {ReactComponent as Ontario} from './Ontario.svg'
 import Pins from './Pins'
 import {ReactComponent as Quebec} from './Quebec.svg'
 import {ReactComponent as Saskatchewan} from './Saskatchewan.svg'
-import {ReactComponent as Yukon} from './Yukon.svg'
+import {ReactComponent as Yukon} from './yukon.svg'
 
 
 function Canada(props) {
