@@ -17,7 +17,7 @@ function App() {
   return (
     <>
     <div className='ret'>
-    <svg height={1000} width={1000} className='Circle'> <circle cx="120" cy="85" r="400" fill="#0b2b57" className='Circle'/></svg>
+    <svg height={700} width={1000} className='Circle'> <circle cx="120" cy="85" r="400" fill="#0b2b57" className='Circle'/></svg>
     <Logo className="Logo"/>
     </div>
     
