@@ -35,7 +35,7 @@ export default function VirtualizedList(props) {
   return (
     
     <Box
-      sx={{overflow: 'auto', width: '100%', maxHeight: 450, maxWidth: 250, bgcolor: 'background.paper', position: "absolute", bottom:"50px",left:"50px" }}
+      sx={{border:'solid',overflow: 'auto', width: '100%', maxHeight: 450, maxWidth: 250, bgcolor: 'background.paper', position: "absolute", bottom:"50px",left:"50px" }}
     >
       <List
         height={400}

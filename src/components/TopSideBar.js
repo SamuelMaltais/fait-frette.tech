@@ -26,7 +26,11 @@ function TopSideBar(props) {
         disablePortal
         id="combo-box-demo"
         options={list}
-        sx={{ width: "100%" }}
+        sx={{ 
+          width: "100%",
+          bgcolor: "#fff",
+          borderRadius: "9px"
+        }}
         onChange={
           (event, city) => {
             props.setCity(city);
@@ -39,7 +43,11 @@ function TopSideBar(props) {
         id="combo-box-demo"
         className="autocomplete-box"
         options={days}
-        sx={{ width: "100%" }}
+        sx={{ 
+          width: "100%",
+          bgcolor: "#fff",
+          borderRadius: "9px"
+        }}
         onChange={
           (event, dayInFuture) => {
             props.setDayInFuture(dayInFuture);
