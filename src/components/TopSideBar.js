@@ -1,5 +1,5 @@
 import { Autocomplete, TextField } from "@mui/material";
-
+import "./topSideBar.css"
 
 function TopSideBar(props) {
     const options = [

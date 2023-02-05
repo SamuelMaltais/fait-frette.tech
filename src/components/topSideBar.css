@@ -1,7 +1,7 @@
 .top-side-bar-container{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     z-index: auto;
-    background-color: white;
+    width: 70%;
 }
