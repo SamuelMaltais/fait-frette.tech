@@ -49,6 +49,7 @@
     position: relative;
     justify-content: center;
     align-items: center;
+    z-index: 10;
   }
 
   .province{

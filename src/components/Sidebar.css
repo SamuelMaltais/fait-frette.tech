@@ -4,9 +4,11 @@
     width: 20%;
     right: 0;
     height: 100%;
+    top: 0;
     background-color: #0b2b57;
     color: #fff;
     padding: 1% 2%;
+    z-index: 30;
 }
 
 .sidebar-section {

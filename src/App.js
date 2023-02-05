@@ -42,18 +42,23 @@ function App() {
     <div className='ret'>
     <svg height={700} width={1000} className='Circle'> <circle cx="120" cy="85" r="400" fill="#0b2b57" className='Circle'/></svg>
     <Logo className="Logo"/>
+    <div>
+    <Canada cities={cities} />
+    <Shadow className="map"/>
+    
     </div>
-    <VirtualizedList cities={cities}/>
-    <div className="App">
-      <div>
-      <Canada cities={cities} />
-      <Shadow className="map"/>
-      </div>
-      <Sidebar 
+    </div>
+    <Sidebar 
         temp={temp} wind={wind} humidity={humidity} city={city} dayInFuture={dayInFuture}
         setTemp={setTemp} setWind={setWind} setHumidity={setHumidity} setCity={setCity} setDayInFuture={setDayInFuture} 
         setCities={setCities}
       />
+    
+    <VirtualizedList cities={cities}/>
+    <div className="App">
+      <div>
+      </div>
+      
     </div>
     </>
   );
