@@ -19,18 +19,18 @@ function Canada(props) {
         <>
         <Pins cities={props.cities}/>
         <div className='map-container'>
-            <Alberta className= "province Alberta"></Alberta>
-            <Saskatchewan className="province Saskatchewan"/>
-            <BritishC className="province Bc"/>
-            <Manitoba className="province Manitoba"/>
-            <NB className="province Nb"/>
-            <Newfoundland className="province Newfoundland"/>
-            <Northwest className="province Northwest"/>
-            <NovaS className="province Ns"/>
-            <Nunavut className="province Nunavut"/>
-            <Ontario className="province Ontario"/>
-            <Quebec className="province Quebec"/>
-            <Yukon className="province Yukon"/>
+            <Alberta className= "province Alberta" />
+            <Saskatchewan className="province Saskatchewan" />
+            <BritishC className="province Bc" />
+            <Manitoba className="province Manitoba" />
+            <NB className="province Nb" />
+            <Newfoundland className="province Newfoundland" />
+            <Northwest className="province Northwest" />
+            <NovaS className="province Ns" />
+            <Nunavut className="province Nunavut" />
+            <Ontario className="province Ontario" />
+            <Quebec className="province Quebec" />
+            <Yukon className="province Yukon" />
         </div>
         </>
      );

@@ -1,4 +1,4 @@
-import { Autocomplete, TextField} from "@mui/material";
+import { Autocomplete, Stack, TextField } from "@mui/material";
 import { cities } from "../cities";
 import "./topSideBar.css"
 
@@ -21,27 +21,33 @@ function TopSideBar(props) {
       ]
       // or
     return ( 
-    <div className="top-side-bar-container">
+    <Stack sx={{width: "100%"}} spacing={5}>
         <Autocomplete
         disablePortal
         id="combo-box-demo"
-        className="autocomplete-box"
         options={list}
-        sx={{ width: 300, color: 'success.main', borderBlock:'success.main',borderBlockColor:'success.main'}}
-        
-        renderInput={(params) => <TextField {...params} label="City" 
-        />}
+        sx={{ width: "100%" }}
+        onChange={
+          (event, city) => {
+            props.setCity(city);
+          }
+        }
+        renderInput={(params) => <TextField {...params} label="City" />}
         />
         <Autocomplete
         disablePortal
         id="combo-box-demo"
         className="autocomplete-box"
         options={days}
-        color="#ffffff"
-        sx={{ width: 300 }}
+        sx={{ width: "100%" }}
+        onChange={
+          (event, dayInFuture) => {
+            props.setDayInFuture(dayInFuture);
+          }
+        }
         renderInput={(params) => <TextField {...params} label="When are you leaving ?" />}
         />
-    </div> 
+    </Stack> 
     );
 }
 
