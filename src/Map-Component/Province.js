@@ -17,27 +17,20 @@ var array = [
 
 
 function Canada(props) {
-    const makeDisplay = (province) => {
-        const list=props.provinceDisplay;
-        list.pop();
-        list.unshift(province);
-        props.setProvinceDisplay(list);
-    }
-    
     return ( 
         <div className='map-container'>
-            <Alberta className= "province Alberta" onClick={() => makeDisplay('Alberta')} />
-            <Saskatchewan className="province Saskatchewan" onClick={() => makeDisplay('Saskatchewan')} />
-            <BritishC className="province Bc" onClick={() => makeDisplay('British Columbia')} />
-            <Manitoba className="province Manitoba" onClick={() => makeDisplay('Manitoba')} />
-            <NB className="province Nb" onClick={() => makeDisplay('New Brunswick')} />
-            <Newfoundland className="province Newfoundland" onClick={() => makeDisplay('Newfoundland')} />
-            <Northwest className="province Northwest" onClick={() => makeDisplay('Northwest Territories')} />
-            <NovaS className="province Ns" onClick={() => makeDisplay('Nova Scotia')} />
-            <Nunavut className="province Nunavut" onClick={() => makeDisplay('Nunavut')} />
-            <Ontario className="province Ontario" onClick={() => makeDisplay('Ontario')} />
-            <Quebec className="province Quebec" onClick={() => makeDisplay('Quebec')} />
-            <Yukon className="province Yukon" onClick={() => makeDisplay('Yukon')} />
+            <Alberta className= "province Alberta" />
+            <Saskatchewan className="province Saskatchewan" />
+            <BritishC className="province Bc" />
+            <Manitoba className="province Manitoba" />
+            <NB className="province Nb" />
+            <Newfoundland className="province Newfoundland" />
+            <Northwest className="province Northwest" />
+            <NovaS className="province Ns" />
+            <Nunavut className="province Nunavut" />
+            <Ontario className="province Ontario" />
+            <Quebec className="province Quebec" />
+            <Yukon className="province Yukon" />
         </div>
      );
 }

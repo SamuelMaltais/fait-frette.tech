@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Province from './Map-Component/Province';
 import {ReactComponent as Logo} from './logo.svg'
@@ -14,7 +14,6 @@ function App() {
   const [wind, setWind] = useState();
   const [humidity, setHumidity] = useState();
   const [dayInFuture, setDayInFuture] = useState();
-  const [provinceDisplay, setProvinceDisplay] = useState(["Quebec", "Ontario", "British Columbia"]);
 
   return (
     <>
