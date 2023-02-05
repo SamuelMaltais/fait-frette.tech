@@ -13,7 +13,29 @@ function App() {
   const [wind, setWind] = useState();
   const [humidity, setHumidity] = useState();
   const [dayInFuture, setDayInFuture] = useState();
+  const [cities, setCities] = useState([
+    {
+        "name":"Montreal",
+        "lat": 45.5089,
+        "lng": -73.5617,
+        "province": "QC"
+    },
 
+    {
+        "name":"Vancouver",
+        "lat": 49.25,
+        "lng": -123.1,
+        "province": "BC"
+    },
+
+    {
+        "name":"Toronto",
+        "lat": 43.7417,
+        "lng": -79.3733,
+        "province": "ON"
+    }
+  ])
+ 
   return (
     <>
     <div className='ret'>
@@ -24,12 +46,13 @@ function App() {
 
     <div className="App">
       <div>
-      <Canada />
+      <Canada cities={cities} />
       <Shadow className="map"/>
       </div>
       <Sidebar 
         temp={temp} wind={wind} humidity={humidity} city={city} dayInFuture={dayInFuture}
         setTemp={setTemp} setWind={setWind} setHumidity={setHumidity} setCity={setCity} setDayInFuture={setDayInFuture} 
+        setCities={setCities}
       />
     </div>
     </>

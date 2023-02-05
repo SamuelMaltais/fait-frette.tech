@@ -1,4 +1,4 @@
-.container {
+.sidebar-container {
     position: absolute;
     box-sizing: border-box;
     width: 20%;
@@ -6,10 +6,10 @@
     height: 100%;
     background-color: #0b2b57;
     color: #fff;
-    padding: 5% 2%;
+    padding: 1% 2%;
 }
 
-.section {
+.sidebar-section {
     width: 100%;
 }
 

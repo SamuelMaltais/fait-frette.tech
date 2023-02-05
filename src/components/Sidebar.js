@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Slider, Stack, Typography } from '@mui/material'
+import { Box, Button, Slider, Stack, Typography } from '@mui/material'
 import { Thermostat, Air, LocalDrink, Add, Remove } from '@mui/icons-material';
 import './Sidebar.css'
 import TopSideBar from './TopSideBar';
@@ -16,10 +16,10 @@ function Sidebar(props) {
     }   
     return (
         <>
-            <Stack className="container" direction="column" alignItems="center" spacing={5}>
+            <Stack className="sidebar-container" direction="column" alignItems="center" justifyContent="center" spacing={5}>
                 <Typography variant="h4">Preferences</Typography>
                 <TopSideBar city={props.city} dayInFuture={props.dayInFuture} setCity={props.setCity} setDayInFuture={props.setDayInFuture} />
-                <Stack className="section" direction="column" alignItems="center" spacing={2}>
+                <Stack className="sidebar-section" direction="column" alignItems="center" spacing={2}>
                     <Typography><Thermostat />  Temperature</Typography>
                     <Stack className="slider" direction="row" spacing={2}>
                         <Remove />
@@ -36,7 +36,7 @@ function Sidebar(props) {
                         <Add />
                     </Stack>
                 </Stack>
-                <Stack className="section" direction="column" alignItems="center" spacing={2}>
+                <Stack className="sidebar-section" direction="column" alignItems="center" spacing={2}>
                     <Typography><Air />  Wind</Typography>
                     <Stack className="slider" direction="row" spacing={2}>
                         <Remove />
@@ -53,7 +53,7 @@ function Sidebar(props) {
                         <Add />
                     </Stack>
                 </Stack>
-                <Stack className="section" direction="column" alignItems="center" spacing={2}>
+                <Stack className="sidebar-section" direction="column" alignItems="center" spacing={2}>
                     <Typography><LocalDrink />  Humidity</Typography>
                     <Stack className="slider" direction="row" spacing={2}>
                         <Remove />
@@ -70,6 +70,11 @@ function Sidebar(props) {
                         <Add />
                     </Stack>
                 </Stack>
+                <Button variant="contained"
+                onClick={()=>{
+                    get
+                }} 
+                >Find Cities</Button>
             </Stack>
         </>
     );
