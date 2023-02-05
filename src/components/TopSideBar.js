@@ -1,4 +1,4 @@
-import { Autocomplete, TextField } from "@mui/material";
+import { Autocomplete, Stack, TextField } from "@mui/material";
 import { cities } from "../cities";
 import "./topSideBar.css"
 
@@ -19,7 +19,7 @@ function TopSideBar(props) {
       ]
       // or
     return ( 
-    <div className="top-side-bar-container">
+    <Stack sx={{width: "100%"}} spacing={5}>
         <Autocomplete
         disablePortal
         id="combo-box-demo"
@@ -44,7 +44,7 @@ function TopSideBar(props) {
         }
         renderInput={(params) => <TextField {...params} label="When are you leaving ?" />}
         />
-    </div> 
+    </Stack> 
     );
 }
 

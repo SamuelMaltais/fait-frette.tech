@@ -17,6 +17,7 @@ function Sidebar(props) {
     return (
         <>
             <Stack className="container" direction="column" alignItems="center" spacing={5}>
+                <Typography variant="h4">Preferences</Typography>
                 <TopSideBar city={props.city} dayInFuture={props.dayInFuture} setCity={props.setCity} setDayInFuture={props.setDayInFuture} />
                 <Stack className="section" direction="column" alignItems="center" spacing={2}>
                     <Typography><Thermostat />  Temperature</Typography>
