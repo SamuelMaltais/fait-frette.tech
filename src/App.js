@@ -4,6 +4,7 @@ import Province from './Map-Component/Province';
 import {ReactComponent as Logo} from './logo.svg'
 import Canada from './Map-Component/Province';
 import TopSideBar from './components/TopSideBar';
+import Sidebar from './components/Sidebar';
 
 function App() {
   const [temp, setTemp] = useState()
@@ -11,7 +12,10 @@ function App() {
   const [wind, setWind] = useState()
   const [humidity, setHumidity] = useState()
   const [dayInFuture, setDayInFuture] = useState()
-
+  var array = []
+  for(var i =0; i<10; i++){
+    array.push(<p>{i}</p>)
+  }
 
   return (
     <>
@@ -20,8 +24,10 @@ function App() {
     <Logo className="Logo"/>
     </div>
     <div className="App">
+      {array}
       <TopSideBar setCity={setCity} dayInFuture = {setDayInFuture} /> 
       <Canada className="map"/>
+      <Sidebar />
     </div>
     </>
   );
