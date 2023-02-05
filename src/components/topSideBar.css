@@ -1,6 +1,6 @@
 .top-side-bar-container{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     z-index: auto;
     width: 70%;

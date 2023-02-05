@@ -12,11 +12,6 @@ function App() {
   const [wind, setWind] = useState()
   const [humidity, setHumidity] = useState()
   const [dayInFuture, setDayInFuture] = useState()
-  var array = []
-  for(var i =0; i<10; i++){
-    array.push(<p>{i}</p>)
-  }
-
   return (
     <>
     <div className='ret'>
@@ -24,8 +19,6 @@ function App() {
     <Logo className="Logo"/>
     </div>
     <div className="App">
-      {array}
-      <TopSideBar setCity={setCity} dayInFuture = {setDayInFuture} /> 
       <Canada className="map"/>
       <Sidebar />
     </div>
